@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springcloud_base" />
+        <module name="springcloud_base_hystrix" />
+        <module name="springcloud_config_server" />
+        <module name="springcloud_eureka_one" />
+        <module name="springcloud_eureka_two" />
+        <module name="springcloud_hystrix_dashboard" />
+        <module name="springcloud_market" />
+        <module name="springcloud_public" />
+        <module name="springcloud_supermarket_feign" />
+        <module name="springcloud_zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloud_base" target="1.8" />
+      <module name="springcloud_base_hystrix" target="1.8" />
+      <module name="springcloud_config_server" target="1.8" />
+      <module name="springcloud_eureka_one" target="1.8" />
+      <module name="springcloud_eureka_two" target="1.8" />
+      <module name="springcloud_hystrix_dashboard" target="1.8" />
+      <module name="springcloud_market" target="1.8" />
+      <module name="springcloud_parent" target="1.8" />
+      <module name="springcloud_public" target="1.8" />
+      <module name="springcloud_supermarket_feign" target="1.8" />
+      <module name="springcloud_zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springcloud_base" options="-parameters" />
+      <module name="springcloud_base_hystrix" options="-parameters" />
+      <module name="springcloud_config_server" options="-parameters" />
+      <module name="springcloud_eureka_one" options="-parameters" />
+      <module name="springcloud_eureka_two" options="-parameters" />
+      <module name="springcloud_hystrix_dashboard" options="-parameters" />
+      <module name="springcloud_market" options="-parameters" />
+      <module name="springcloud_public" options="-parameters" />
+      <module name="springcloud_supermarket_feign" options="-parameters" />
+      <module name="springcloud_zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

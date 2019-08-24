@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springcloud_base/springcloud_base.iml" filepath="$PROJECT_DIR$/springcloud_base/springcloud_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_base_hystrix/springcloud_base_hystrix.iml" filepath="$PROJECT_DIR$/springcloud_base_hystrix/springcloud_base_hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_config_server/springcloud_config_server.iml" filepath="$PROJECT_DIR$/springcloud_config_server/springcloud_config_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_eureka_one/springcloud_eureka_one.iml" filepath="$PROJECT_DIR$/springcloud_eureka_one/springcloud_eureka_one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_eureka_two/springcloud_eureka_two.iml" filepath="$PROJECT_DIR$/springcloud_eureka_two/springcloud_eureka_two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_hystrix_dashboard/springcloud_hystrix_dashboard.iml" filepath="$PROJECT_DIR$/springcloud_hystrix_dashboard/springcloud_hystrix_dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_market/springcloud_market.iml" filepath="$PROJECT_DIR$/springcloud_market/springcloud_market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_parent/springcloud_parent.iml" filepath="$PROJECT_DIR$/springcloud_parent/springcloud_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_public/springcloud_public.iml" filepath="$PROJECT_DIR$/springcloud_public/springcloud_public.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_supermarket_feign/springcloud_supermarket_feign.iml" filepath="$PROJECT_DIR$/springcloud_supermarket_feign/springcloud_supermarket_feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_zuul/springcloud_zuul.iml" filepath="$PROJECT_DIR$/springcloud_zuul/springcloud_zuul.iml" />
+    </modules>
+  </component>
+</project>

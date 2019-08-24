@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/springcloud_base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_base_hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_config_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_eureka_one" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_eureka_two" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_hystrix_dashboard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_market" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_public" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_supermarket_feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_zull" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_zuul" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

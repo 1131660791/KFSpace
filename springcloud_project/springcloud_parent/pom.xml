@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.springcloud.parent</groupId>
+    <artifactId>springcloud_parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>../springcloud_eureka_one</module>
+        <module>../springcloud_eureka_two</module>
+        <module>../springcloud_public</module>
+        <module>../springcloud_base</module>
+        <module>../springcloud_market</module>
+        <module>../springcloud_supermarket_feign</module>
+        <module>../springcloud_base_hystrix</module>
+        <module>../springcloud_hystrix_dashboard</module>
+        <module>../springcloud_zuul</module>
+        <module>../springcloud_config_server</module>
+    </modules>
+
+    <!-- 项目的打包类型：pom、jar、war packing默认是jar类型 -->
+    <!--  父类型都为pom类型 -->
+    <packaging>pom</packaging>
+    <!-- <packaging>jar</packaging> 内部调用或者是作服务使用 -->
+    <!-- <packaging>war</packaging> 需要部署的项目 -->
+
+    <parent> <!-- 引入springboot 启动类 -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.9.RELEASE</version>
+        <relativePath/> <!-- 设定一个空值将始终从仓库中获取，不从本地路径获取 -->
+    </parent>
+
+    <properties> <!-- 指定导入jar包版本 -->
+        <junit.version>4.12</junit.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.RELEASE</version>
+                <type>pom</type>
+                <!-- maven不支持多继承，使用import来依赖管理配置 -->
+                <scope>import</scope>
+            </dependency>
+
+            <!--导入 mybatis 启动器-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+
+            <!--druid 数据源 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.12</version>
+            </dependency>
+            <!-- 导入数据库连接 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.13</version>
+            </dependency>
+            <!-- lombok  -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.20</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- 引用单元测试类 -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
