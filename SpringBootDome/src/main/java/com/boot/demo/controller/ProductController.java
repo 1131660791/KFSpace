@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.boot.demo.pojo.Product;
 import com.boot.demo.service.ProductService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,16 @@ public class ProductController {
 
     @Resource
     private ProductService productService;
+
+    // 获取动态参数
+    @Value("${par.test_url}")
+    private String testUrl;
+
+    @RequestMapping("test")
+    public String test(){
+
+        return testUrl;
+    }
 
     /**
      * 分页查询

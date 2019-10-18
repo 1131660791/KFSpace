@@ -22,9 +22,9 @@ public class CodeGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-      //  String projectPath = System.getProperty("user.dir");
+        //  String projectPath = System.getProperty("user.dir");
         // 配置路径
-        String projectPath =  "D:\\JavaSpace\\IdeaSpace\\KFSpace\\SpringBootDome";
+        String projectPath = "D:\\JavaSpace\\IdeaSpace\\KFSpace\\SpringBootDome";
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
@@ -32,7 +32,7 @@ public class CodeGenerator {
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(true);// XML columList
         gc.setOpen(false);
-        gc.setAuthor("base");
+        gc.setAuthor("hzw");
 
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
@@ -84,10 +84,10 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         //此处可以修改为您的表前缀
         strategy.setTablePrefix(new String[]{""});
-        // 表名生成策略
+        // 表名生成策略 - 默认驼峰法
         strategy.setNaming(NamingStrategy.underline_to_camel);
         // 需要生成的表
-     //   strategy.setInclude(new String[]{"product"});
+        strategy.setInclude(new String[]{"xs"});
 
         // 排除生成的表
         //strategy.setExclude(new String[]{"test"});

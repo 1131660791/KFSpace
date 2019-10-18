@@ -5,7 +5,19 @@ spring:
   application:
     name: spring_boot_dome
 
+  # 数据库链接
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://127.0.0.1/spring_cloud_database?useUnicode=true&serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: mysql
+
 # mybatis-plus
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.boot.demo.pojo
+
+# p6spy 日志-控制台打印sql Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples: debug
