@@ -17,7 +17,7 @@
     <!---->
     <select id="findProductPage" parameterType="com.boot.demo.pojo.Product" resultType="com.boot.demo.pojo.Product">
          select
-            pid,product_name as productName,db_source as dbSource
+           *
          from product
     </select>
 

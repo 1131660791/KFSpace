@@ -5,20 +5,23 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.boot.demo.pojo.Product;
 import com.boot.demo.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.logging.Logger;
 
 /**
  * <p>
- * 前端控制器
+ *   前端控制器
  * </p>
  *
  * @author base
  * @since 2019-10-17
  */
+@Slf4j
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -32,7 +35,6 @@ public class ProductController {
 
     @RequestMapping("test")
     public String test(){
-
         return testUrl;
     }
 
@@ -51,5 +53,15 @@ public class ProductController {
         return product;
     }
 
+    @RequestMapping(value = "testExpro")
+    public void testExpro() throws Exception {
+        try{
+            throw new Exception();
+        }catch (Exception e){
+            e.printStackTrace();
+            log.error(e.getMessage());
+        }
+
+    }
 
 }

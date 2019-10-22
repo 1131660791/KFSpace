@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
+@Profile({"dev","prod"})// 设置 dev test 环境开启
 @MapperScan("com.boot.demo.mapper")
 public class PaginationConfig {
 

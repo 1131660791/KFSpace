@@ -1,4 +1,4 @@
-package com.boot.demo.generator;
+package com.boot.demo.config.generator;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
@@ -17,7 +17,6 @@ import java.util.List;
 public class CodeGenerator {
 
     public static void main(String[] args) {
-
         AutoGenerator mpg = new AutoGenerator();
 
         // 全局配置
