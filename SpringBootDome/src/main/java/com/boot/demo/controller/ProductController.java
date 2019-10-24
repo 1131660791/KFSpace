@@ -9,9 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.util.logging.Logger;
 
 /**
  * <p>
@@ -29,7 +29,10 @@ public class ProductController {
     @Resource
     private ProductService productService;
 
-    // 获取动态参数
+    @Resource
+    private RestTemplate restTemplate;
+
+    /** 获取动态参数 */
     @Value("${par.test_url}")
     private String testUrl;
 
@@ -61,6 +64,11 @@ public class ProductController {
             e.printStackTrace();
             log.error(e.getMessage());
         }
+
+    }
+
+    @RequestMapping(value = "pushTemplate")
+    public void pushTemplate(){
 
     }
 
