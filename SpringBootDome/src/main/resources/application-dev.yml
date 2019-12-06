@@ -12,6 +12,13 @@ spring:
     username: root
     password: mysql
 
+  #redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: #没有密码可以不用填写
+
+
 # mybatis-plus
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml

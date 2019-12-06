@@ -1,6 +1,6 @@
 # 端口号
 server:
-  port: 8088
+  port: 8089
 
 spring:
   application:
@@ -12,6 +12,12 @@ spring:
     url: jdbc:mysql://127.0.0.1/spring_cloud_database?useUnicode=true&serverTimezone=GMT%2B8&characterEncoding=utf-8
     username: root
     password: mysql
+
+  #redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  # password: 没有密码可以不用填写
 
 # mybatis-plus
 mybatis-plus:
