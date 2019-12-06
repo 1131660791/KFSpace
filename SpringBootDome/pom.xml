@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <lombok.version>1.18.10</lombok.version>
     </properties>
 
     <dependencies>
@@ -45,7 +46,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>${lombok.version}</version>
         </dependency>
 
         <!-- mybatis-plus start -->
@@ -74,6 +75,23 @@
             <version>1.7</version>
         </dependency>
         <!-- mybatis-plus end -->
+
+        <!-- redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <version>2.5.1</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
