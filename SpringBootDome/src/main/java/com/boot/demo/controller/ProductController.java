@@ -3,19 +3,19 @@ package com.boot.demo.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.boot.demo.common.redis.RedisUtils;
 import com.boot.demo.pojo.Product;
 import com.boot.demo.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 
 /**
  * <p>
- *   前端控制器
+ * 前端控制器
  * </p>
  *
  * @author base
@@ -30,14 +30,16 @@ public class ProductController {
     private ProductService productService;
 
     @Resource
-    private RestTemplate restTemplate;
+    private RedisUtils redisUtils;
 
-    /** 获取动态参数 */
+    /**
+     * 获取动态参数
+     */
     @Value("${par.test_url}")
     private String testUrl;
 
     @RequestMapping("test")
-    public String test(){
+    public String test() {
         return testUrl;
     }
 
@@ -58,9 +60,9 @@ public class ProductController {
 
     @RequestMapping(value = "testExpro")
     public void testExpro() throws Exception {
-        try{
+        try {
             throw new Exception();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             log.error(e.getMessage());
         }
@@ -68,8 +70,9 @@ public class ProductController {
     }
 
     @RequestMapping(value = "pushTemplate")
-    public void pushTemplate(){
-
+    public void pushTemplate() {
+        log.error("redisUtils: " + redisUtils.get("key"));
+        System.out.println(redisUtils.get("key"));
     }
 
 }
