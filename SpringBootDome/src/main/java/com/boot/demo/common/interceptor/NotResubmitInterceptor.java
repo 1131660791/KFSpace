@@ -2,7 +2,6 @@ package com.boot.demo.common.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.boot.demo.common.enums.ResponseCodeEnum;
-import com.boot.demo.common.enums.StatusEnum;
 import com.boot.demo.common.redis.RedisUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
