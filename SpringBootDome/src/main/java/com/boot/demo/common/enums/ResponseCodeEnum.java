@@ -57,7 +57,17 @@ public enum ResponseCodeEnum {
     ONLINE_FAILED(96_070, "上线失败", "上线[%s]失败"),
     AUDIT_FAILED(96_080, "审核失败", "审核[%s]失败"),
     DATA_EXISTED(96_090, "数据已经存在", "[%s]已经存在"),
-    DATA_NOT_FOUND(95_100, "数据未找到", "[%s]数据未找到");
+    DATA_NOT_FOUND(95_100, "数据未找到", "[%s]数据未找到"),
+
+
+    /**
+     * 203-无操作权限
+     */
+    NO_RIGHT(203, "no right", "权限校验"),
+    /**
+     * 257-已使用
+     */
+    REQUEST_FREQUENT(429, "操作过于频繁，请稍后再试", "同一接口请求过于频繁");
 
     private final static Map<Integer, ResponseCodeEnum> BY_CODE_MAP = Arrays.stream(ResponseCodeEnum.values())
             .collect(Collectors.toMap(ResponseCodeEnum::getCode, code -> code));

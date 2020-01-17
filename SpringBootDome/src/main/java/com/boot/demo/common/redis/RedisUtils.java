@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.BoundListOperations;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
  * @date 2019-09-18
  */
 @Slf4j
+@Service
 public class RedisUtils {
     /**
      * Redis 连接
