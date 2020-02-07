@@ -1,4 +1,4 @@
-package com.rabbitmq.simplequeue;
+package com.rabbitmq.util;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -15,7 +15,7 @@ public class ConnectionUtils {
         factory.setPassword("123456");
         factory.setPort(15672);
         // 获取 VirtualHost
-        factory.setVirtualHost("zwvirtualhosts");
+        factory.setVirtualHost("/zwvirtualhosts");
         // 通过工程获取连接
         Connection connection = factory.newConnection();
         return connection;
