@@ -1,9 +1,6 @@
 package com.rabbitmq.simplequeue;
 
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.DefaultConsumer;
-import com.rabbitmq.client.QueueingConsumer;
+import com.rabbitmq.client.*;
 import com.rabbitmq.util.ConnectionUtils;
 
 import java.io.IOException;
@@ -15,15 +12,16 @@ public class customer {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Connection connection = ConnectionUtils.getConnection();
-        Channel channel = connection.createChannel();
+        final Channel channel = connection.createChannel();
         channel.queueDeclare("queue_name", false, false, false, null);
-        QueueingConsumer queueingConsumer = new QueueingConsumer(channel);
+        DefaultConsumer queueingConsumer = new DefaultConsumer(channel) {
+            @Override
+            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+                String massge = new String(body);
+                channel.basicAck(envelope.getDeliveryTag(), false);
+            }
+        };
         // 监听队列 队列名称,是否自动应答，客户
         channel.basicConsume("queue_name", true, queueingConsumer);
-
-        while (true) {
-            QueueingConsumer.Delivery delivery = queueingConsumer.nextDelivery();
-            System.out.println(delivery.getBody());
-        }
     }
 }
