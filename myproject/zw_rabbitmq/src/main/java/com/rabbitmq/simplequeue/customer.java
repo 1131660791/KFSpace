@@ -18,6 +18,7 @@ public class customer {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 String massge = new String(body);
+                System.out.println("点对点接受到消息:"+massge);
                 channel.basicAck(envelope.getDeliveryTag(), false);
             }
         };
