@@ -22,7 +22,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
     public RedisTemplate redisTemplate(RedisConnectionFactory connectionFactory) {
         RedisTemplate<String, Object> template = new RedisTemplate<>();
         FastJsonRedisSerializer<Object> fastJsonRedisSerializer = new FastJsonRedisSerializer<>(Object.class);
-        ParserConfig.getGlobalInstance().addAccept("com.boot.demo.");
+        ParserConfig.getGlobalInstance().addAccept("com.boot.demo.*");
 
         template.setConnectionFactory(connectionFactory);
 

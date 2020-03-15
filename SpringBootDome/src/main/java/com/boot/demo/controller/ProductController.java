@@ -6,6 +6,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.boot.demo.common.redis.RedisUtils;
 import com.boot.demo.pojo.Product;
 import com.boot.demo.service.ProductService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +27,7 @@ import javax.annotation.Resource;
 @Slf4j
 @RestController
 @RequestMapping("/product")
+@Api(tags = "提供者")
 public class ProductController {
 
     @Resource
@@ -43,11 +47,7 @@ public class ProductController {
         return testUrl;
     }
 
-    /**
-     * 分页查询
-     *
-     * @return
-     */
+    @ApiOperation(value = "分页查询",notes = "说明")
     @RequestMapping(value = "findAllProduct")
     public IPage<Product> findAllProduct() {
         Product p = productService.getById(1L);
