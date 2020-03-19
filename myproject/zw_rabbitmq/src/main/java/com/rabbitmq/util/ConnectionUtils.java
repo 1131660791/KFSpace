@@ -13,7 +13,7 @@ public class ConnectionUtils {
         factory.setHost("localhost");
         factory.setUsername("hzw");
         factory.setPassword("123456");
-        factory.setPort(15672);
+        factory.setPort(5672);
         // 获取 VirtualHost
         factory.setVirtualHost("/zwvirtualhosts");
         // 通过工程获取连接
