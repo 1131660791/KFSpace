@@ -1,0 +1,11 @@
+# 端口
+server:
+  port: 8080
+
+# thymeleaf 缓存关闭
+spring:
+  thymeleaf:
+    cache: true
+
+setting:
+  api: api
