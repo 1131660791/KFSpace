@@ -23,8 +23,15 @@ public class WorkCustomerTwo {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 String massge = new String(body);
+                System.out.println("消费者two接受消息：" + massge);
                 // 应答 参数2 确定应答消息
                 channel.basicAck(envelope.getDeliveryTag(),false);
+                //休眠
+                try {
+                    Thread.sleep( 100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         };
         // 监听队列，false表示手动返回完成状态，true表示自动
